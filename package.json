@@ -1,16 +1,11 @@
 {
   "name": "server-practice",
   "version": "1.0.0",
-  "description": "Marco Polo Game",
+  "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "vercel-build": "echo 'Build complete'"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +16,10 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "socket.io": "^4.7.5"
+    "live-server": "^1.2.2",
+    "serve": "^14.2.3",
+    "socket.io": "^4.7.5",
+    "vanilla-router": "^1.2.0",
+    "socket.io-client": "^4.0.0"
   }
 }

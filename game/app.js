@@ -3,12 +3,7 @@ import renderLobbyScreen from "./screens/lobbyScreen.js";
 import renderGameGround from "./screens/gameGround.js";
 import renderGameOverScreen from "./screens/gameOverScreen.js";
 
-// Detectar si estamos en producción (Vercel) o desarrollo (local)
-const BASE_URL = window.location.hostname === 'localhost' 
-  ? 'http://localhost:5050' 
-  : window.location.origin;
-
-const socket = io(BASE_URL, { path: "/real-time" });
+const socket = io("/", { path: "/real-time" });
 
 function clearScripts() {
   document.getElementById("app").innerHTML = "";
@@ -48,6 +43,7 @@ function navigateTo(path, data) {
 
 async function makeRequest(url, method, body) {
   try {
+    const BASE_URL = "http://localhost:5050";
     let response = await fetch(`${BASE_URL}${url}`, {
       method: method,
       headers: {

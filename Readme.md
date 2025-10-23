@@ -1,4 +1,4 @@
-# Parcial 2 – Marco Polo Game pa edward
+# Parcial 2 – Marco Polo Game Pa edward
 
 ## Descripción General  
 Este proyecto implementa un sistema interactivo del juego Marco Polo, con comunicación en tiempo real entre jugadores y una pantalla de resultados dinámica.  

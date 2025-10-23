@@ -3,12 +3,37 @@ import { navigateTo, socket } from "../app.js";
 export default function renderScreen1() {
   const app = document.getElementById("app");
   app.innerHTML = `
-    <div id="screen1">
-      <h2> Marcador en Tiempo Real </h2>
+    <div id="screen1" style="text-align: center;">
+      <h2 style="color: #fff; font-size: 2rem; margin-top: 1rem;">Marcador en Tiempo Real</h2>
       <div id="players-list" style="margin-top: 2rem;"></div>
-      <button id="reset-button" style="margin-top: 2rem; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+      <button id="reset-button" style="
+        margin-top: 2rem;
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: white;
+        background: linear-gradient(135deg, #ff6a88 0%, #ff99ac 100%);
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(255, 105, 135, 0.3);
+        transition: all 0.3s ease;
+      ">
          Reiniciar Juego
       </button>
+
+      <style>
+        #reset-button:hover {
+          transform: scale(1.08);
+          background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+          box-shadow: 0 0 20px rgba(255, 120, 150, 0.6);
+        }
+
+        #reset-button:active {
+          transform: scale(0.96);
+          box-shadow: 0 0 10px rgba(255, 120, 150, 0.4);
+        }
+      </style>
     </div>
   `;
 

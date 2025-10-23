@@ -1,16 +1,15 @@
-# Parcial 2 – Marco Polo Game
+# Parcial 2 – Marco Polo Game pa edward
 
 ## Descripción General  
 Este proyecto implementa un sistema interactivo del juego Marco Polo, con comunicación en tiempo real entre jugadores y una pantalla de resultados dinámica.  
-Incluye una interfaz moderna, animaciones suaves y actualizaciones automáticas del marcador.  
+Incluye una interfaz moderna, animaciones suaves y actualizaciones automáticas del marcador.Animate a jugar pues egh
 
 ---
 
 ## Características Principales  
-- Actualización en tiempo real de las puntuaciones.  
-- Colores dinámicos: verde para puntuaciones positivas y rojo para negativas.  
-- Medallas automáticas para los tres primeros lugares.  
-- Interfaz moderna con botones interactivos y diseño adaptable.  
+- Actualización en tiempo real de las puntuaciones para que no digan que fue trucado.  
+- Medallas automáticas para los tres primeros lugares pa felicitar a la gente.  
+- Interfaz moderna con botones interactivos y diseño adaptable porque lo de diseñador no se pierde.  
 - Manejo de errores en conexión y actualización de datos.  
 - Reinicio automático del juego al alcanzar la puntuación máxima (100 puntos).  
 

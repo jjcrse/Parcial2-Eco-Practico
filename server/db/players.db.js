@@ -7,7 +7,11 @@ const getAllPlayers = () => {
 };
 
 const addPlayer = (nickname, socketId) => {
-  const newPlayer = { id: socketId, nickname };
+  const newPlayer = { 
+    id: socketId, 
+    nickname,
+    score: 0 
+  };
   players.push(newPlayer);
   return newPlayer;
 };
@@ -29,8 +33,38 @@ const findPlayersByRole = (role) => {
   return players.filter((player) => player.role === role);
 };
 
+const updatePlayerScore = (socketId, points) => {
+  const player = findPlayerById(socketId);
+  if (player) {
+    player.score += points;
+    return player;
+  }
+  return null;
+};
+
+const getPlayersByScore = () => {
+  return [...players].sort((a, b) => b.score - a.score);
+};
+
+const getPlayersAlphabetically = () => {
+  return [...players].sort((a, b) => 
+    a.nickname.localeCompare(b.nickname, 'es', { sensitivity: 'base' })
+  );
+};
+
+const checkWinner = () => {
+  return players.find((player) => player.score >= 100) || null;
+};
+
 const getGameData = () => {
   return { players };
+};
+
+const resetScores = () => {
+  players.forEach((player) => {
+    player.score = 0;
+    delete player.role;
+  });
 };
 
 const resetGame = () => {
@@ -43,6 +77,11 @@ module.exports = {
   findPlayerById,
   assignPlayerRoles,
   findPlayersByRole,
+  updatePlayerScore,
+  getPlayersByScore,
+  getPlayersAlphabetically,
+  checkWinner,
   getGameData,
+  resetScores,
   resetGame,
 };
